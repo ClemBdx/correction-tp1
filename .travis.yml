@@ -9,10 +9,10 @@ jobs:
   include:
     - stage: dev
       name: Test 1
-      script: ./scripts/build
-    - stage: ops
+      script: bash scripts/build.sh
+    - stage: prod
       name: Test 2
-      script: ./script/docker
+      script: bash script/docker.sh
 
 branches:
   only:
