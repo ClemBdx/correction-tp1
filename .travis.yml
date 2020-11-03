@@ -12,7 +12,7 @@ jobs:
       script: bash scripts/build.sh
     - stage: prod
       name: Test 2
-      script: bash script/docker.sh
+      script: bash scripts/docker.sh
 
 branches:
   only:
