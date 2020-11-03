@@ -1,3 +1,4 @@
 language: java
 script:
-  - #TODO: test and build your application with maven
+  - cd ./simple-api
+  - mvn clean verify
