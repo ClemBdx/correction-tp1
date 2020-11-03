@@ -2,7 +2,7 @@ language: java
 dist: xenial
 addons:
   sonarcloud:
-    organization: "ClemBdx"
+    organization: "clembdx"
     token: "$SONARCLOUD_TOKEN"
 
 script:
