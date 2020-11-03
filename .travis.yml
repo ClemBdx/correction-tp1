@@ -1,4 +1,9 @@
 language: java
+dist: xenial
+addons:
+  sonarcloud:
+    organization: "ClemBdx"
+    token: "$SONARCLOUD_TOKEN"
 
 script:
   - cd ./simple-api
@@ -21,7 +26,3 @@ cache:
 services:
   - docker
 
- addons:
-  sonarcloud:
-    organization: "ClemBdx"
-    token: "$SONARCLOUD_TOKEN"
