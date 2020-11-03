@@ -75,3 +75,5 @@ They are java libraries that allow you to run docker containers while
 testing
 
 ### ***Why do we need this branch ?***
+
+### ***Secured variables, why ?***
