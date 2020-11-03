@@ -2,7 +2,7 @@ language: java
 
 script:
   - cd ./simple-api
-  - mvn clean verify
+  - mvn clean verify org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=clembdx
   # Connexion à Docker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Build
@@ -20,3 +20,8 @@ cache:
 
 services:
   - docker
+
+ addons:
+  sonarcloud:
+    organization: "ClemBdx"
+    token: "$SONARCLOUD_TOKEN"
