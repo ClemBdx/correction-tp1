@@ -1,19 +1,18 @@
 language: java
-dist: xenial
+
 addons:
   sonarcloud:
     organization: "clembdx"
     token: "$SONARCLOUD_TOKEN"
 
-script:
-  - cd ./simple-api
-  - mvn clean verify org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ClemBdx_correction-tp1
-  # Connexion à Docker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  # Build
-  - docker build -t $DOCKER_USERNAME/tp-devops .
-  # Publication des images
-  - docker push $DOCKER_USERNAME/tp-devops
+jobs:
+  include:
+    - stage: dev
+      name: Test 1
+      script: ./scripts/build.sh
+    - stage: ops
+      name: Test 2
+      script: ./script/docker.sh
 
 branches:
   only:
