@@ -2,7 +2,10 @@
   docker_container:
     name: database
     image: rayukx/tp-devops:tp2_database
-    state: started
     restart: yes
     networks:
       - name: devops
+    env:
+      POSTGRES_PASSWORD=pwd
+      POSTGRES_USER=usr
+      POSTGRES_DB=db

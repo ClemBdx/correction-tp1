@@ -5,9 +5,9 @@
   - name: Test connection
     ping:
   roles:
-  #- docker
-  #- python
-  #- network
+  - docker
+  - python
+  - network
   - database
   - app
   - proxy
