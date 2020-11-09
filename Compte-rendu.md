@@ -35,7 +35,7 @@ With docker terminal go to the Dockerfile folder and run :
  
     docker build -t rayukx/tp-database .
    
-  Builds the image and calls it tayukx/tp-database from the . folder
+  Builds the image and calls it rayukx/tp-database from the . folder
   
      docker network create devops
      
@@ -55,11 +55,11 @@ On a new terminal :
     
 ### ***Why should we run the container with a flag -e to give the environment variables ?***
 
-To secure the varaibles
+To secure the variables
 
 ### ***Why do we need a volume to be attached to our postgres container ?***
 
-It acts like a memory so it saves our database when we quit
+It acts like a memory, so it saves our database when we quit
 
 #TP2
 
@@ -75,5 +75,13 @@ They are java libraries that allow you to run docker containers while
 testing
 
 ### ***Why do we need this branch ?***
+The develop branch is for the development
 
 ### ***Secured variables, why ?***
+Because we don't want anyone to use the pass
+
+#TP3
+
+### ***What is $basearch?***
+
+It references the base architecture of the system

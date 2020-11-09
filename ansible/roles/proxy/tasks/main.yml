@@ -1,0 +1,8 @@
+- name: Start a container and use an env file
+  docker_container:
+    name: reverse_proxy
+    image: rayukx/tp-devops:tp2_httpd
+    ports:
+      - "80:80"
+    networks:
+      - name: devops

@@ -1,0 +1,7 @@
+- name: Start a container
+  docker_container:
+    name: backend
+    image: rayukx/tp-devops:tp2_simple_api
+    networks:
+      - name: devops
+        links: database

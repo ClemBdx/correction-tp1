@@ -1,0 +1,14 @@
+- name: Install epel-release
+  yum:
+    name: epel-release
+    state: latest
+
+- name: Install pip
+  yum:
+    name: python-pip
+    state: latest
+
+- name: Make sure Docker is running
+  pip:
+    name: docker
+    state: latest

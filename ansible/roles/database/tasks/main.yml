@@ -1,0 +1,8 @@
+- name: Start a container
+  docker_container:
+    name: database
+    image: rayukx/tp-devops:tp2_database
+    state: started
+    restart: yes
+    networks:
+      - name: devops
