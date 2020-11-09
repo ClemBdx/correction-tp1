@@ -3,5 +3,4 @@
     name: backend
     image: rayukx/tp-devops:tp2_simple_api
     networks:
-      - name: devops
-        links: database
+      - name: app-network

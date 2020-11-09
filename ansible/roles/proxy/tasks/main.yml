@@ -5,4 +5,4 @@
     ports:
       - "80:80"
     networks:
-      - name: devops
+      - name: app-network

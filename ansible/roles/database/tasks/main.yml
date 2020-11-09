@@ -4,7 +4,7 @@
     image: rayukx/tp-devops:tp2_database
     restart: yes
     networks:
-      - name: devops
+      - name: app-network
     env:
       POSTGRES_PASSWORD=pwd
       POSTGRES_USER=usr
