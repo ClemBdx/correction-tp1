@@ -6,7 +6,7 @@ Create a 3-tiers app:
 - Backend API
 - Database
 
-##Download the containers images
+## Download the containers images
 The PostgreSQL object-relational database system provides reliability and data integrity.
 - docker pull postgres
 
@@ -55,33 +55,52 @@ On a new terminal :
     
 ### ***Why should we run the container with a flag -e to give the environment variables ?***
 
-To secure the variables
+To secure the variables.
 
 ### ***Why do we need a volume to be attached to our postgres container ?***
 
-It acts like a memory, so it saves our database when we quit
+It acts like a memory, so it saves our database when we quit.
 
-#TP2
+### ***Why do we need a multistage build ?*** ###
+
+To optimize the size of the images.
+
+### ***Why do we need a reverse proxy ?*** ###
+
+We need it to protect the connection from outside.
+
+### ***Why is docker-compose so important ?*** ###
+
+It can centralize all the actions of the dockerfiles and run it with one command line.
+
+### ***Why do we put our images into an online repository ?*** ###
+
+To be saved and usable by other machines.
+
+# TP2
 
 ### ***Ok, what is it supposed to do ?***
 
-
-### ***Unit tests ? Component test ?***
-
+It will clear the previous builds inside the cache and it will freshly build each module inside your application.
 
 ### ***What are testcontainers?***
 
-They are java libraries that allow you to run docker containers while
-testing
+They are java libraries that allow you to run docker containers while testing.
 
 ### ***Why do we need this branch ?***
-The develop branch is for the development
+
+Allows to differenciate the production and the development.
 
 ### ***Secured variables, why ?***
-Because we don't want anyone to use the pass
 
-#TP3
+Because we don't want anyone to use the pass.
+
+### ***For what purpose?*** ###
+
+Check the correct operation of the application at each push.
+
+# TP3
 
 ### ***What is $basearch?***
 
-It references the base architecture of the system
+It references the base architecture of the system.
